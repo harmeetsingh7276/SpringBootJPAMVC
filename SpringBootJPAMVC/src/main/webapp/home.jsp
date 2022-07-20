@@ -20,5 +20,10 @@
 		<input type="submit" value="Submit"/>
 	</form>
 	
+	<form action="deleteAlien">
+		<input type="text" name="aid"/>
+		<input type="submit" value="Submit"/>
+	</form>
+	
 </body>
 </html>

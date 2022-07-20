@@ -32,4 +32,11 @@ public class AlienController {
 		mv.addObject("alien",al);
 		return mv;
 	}
+	
+	@RequestMapping("/deleteAlien")
+	public ModelAndView deleteAlien(@RequestParam("aid") int id) {
+		ModelAndView mv=new ModelAndView("showAlien.jsp");
+		repo.deleteById(id);
+		return mv;
+	}
 }
