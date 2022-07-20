@@ -13,5 +13,12 @@
 		<input type="text" name="aname"/>
 		<input type="submit" value="Submit"/>
 	</form>
+	GET Information
+	
+	<form action="getAlien">
+		<input type="text" name="aid"/>
+		<input type="submit" value="Submit"/>
+	</form>
+	
 </body>
 </html>
