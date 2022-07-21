@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,7 +48,14 @@ public class AlienController {
 		return repo.findAll();
 	}
 	
-	@RequestMapping("/alien/{aid}")
+	@DeleteMapping("/alien/{aid}")
+	public String deleteAlienAPI(@PathVariable("aid") int aid) {
+		Alien a=repo.getOne(aid);
+		repo.delete(a);
+		return "Deleted";
+	}
+	
+	@GetMapping("/alien/{aid}")
 	public Optional<Alien> getAlienAPI(@PathVariable("aid") int aid) {
 		return repo.findById(aid);
 	}
