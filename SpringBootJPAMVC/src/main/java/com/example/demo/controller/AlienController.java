@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -52,8 +53,9 @@ public class AlienController {
 	}
 	
 	@PostMapping("/alien")
-	public Optional<Alien> postAlien(@PathVariable("aid") int aid) {
-		return repo.findById(aid);
+	public Alien postAlien(@RequestBody Alien alien) {
+		repo.save(alien);
+		return alien;
 	}
 	
 	@RequestMapping("/deleteAlien")
