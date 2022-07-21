@@ -19,9 +19,14 @@
 		<input type="text" name="aid"/>
 		<input type="submit" value="Submit"/>
 	</form>
-	
+	Delete Information
 	<form action="deleteAlien">
 		<input type="text" name="aid"/>
+		<input type="submit" value="Submit"/>
+	</form>
+	<form action="updateAlien">
+		<input type="text" name="aid"/>
+		<input type="text" name="aname"/>
 		<input type="submit" value="Submit"/>
 	</form>
 	
