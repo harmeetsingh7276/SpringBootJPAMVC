@@ -38,7 +38,7 @@ public class AlienController {
 		return mv;
 	}
 	
-	@RequestMapping(path="/aliens",produces = {"application/xml"})
+	@RequestMapping(path="/aliens")
 	@ResponseBody
 	public List<Alien> getAliens() {
 		return repo.findAll();
